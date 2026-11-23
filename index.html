@@ -393,7 +393,102 @@ section {
   border-color: #62d9ff55;
 }
 
-/* SKILLS */
+/* ABOUT SECTION */
+
+.about-greeting {
+  color: var(--blue);
+  font-size: 20px;
+  margin: 4px 0 12px;
+}
+
+.about-story {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.about-story p {
+  margin-bottom: 12px;
+}
+
+.about-divider {
+  height: 1px;
+  background: #ffffff25;
+  margin: 22px 0 14px;
+}
+
+.about-defines-title {
+  color: var(--white);
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.about-traits {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.about-trait {
+  min-height: 84px;
+  padding: 10px;
+  border-radius: 13px;
+  background: #19263f;
+  border: 1px solid #ffffff08;
+  transform-style: flat;
+}
+
+.about-trait::before {
+  display: none;
+}
+
+.about-trait:hover {
+  transform: translateY(-3px);
+  border-color: #62d9ff55;
+  box-shadow: 0 8px 22px #0003;
+}
+
+.about-trait .trait-number {
+  display: block;
+  color: var(--blue);
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 3px;
+}
+
+.about-trait h3 {
+  color: var(--white);
+  font-size: 13px;
+  margin: 0 0 3px;
+}
+
+.about-trait p {
+  color: #c0cbe0;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.about-philosophy {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 13px;
+  background: #19263f;
+  border: 1px solid #ffffff08;
+}
+
+.about-philosophy span {
+  display: block;
+  color: var(--blue);
+  font-size: 9px;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.about-philosophy p {
+  color: var(--white);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+}/* SKILLS */
 
 .skills {
   display: flex;
@@ -653,52 +748,91 @@ footer span {
 
 <!-- ABOUT -->
 <section id="about" class="reveal">
-  <h2 class="section-title">About <span class="gradient">Me.</span></h2>
-  <p class="section-subtitle">A little introduction.</p>
 
-  <div class="about-box">
-    <h3 style="color:var(--blue);margin-bottom:12px;">
-      Who am I?
-    </h3>
-    <p style="color:var(--muted);">
-      I'm Akshra. I'm interested in technology, programming,
-      creativity and exploring new possibilities.
-      This website is my personal digital space where
-      I share my journey, ideas and projects.
+  <div class="tag">THE PERSON BEHIND AKSHRA</div>
+
+  <h2 class="section-title">
+    Curious by nature.
+    <span class="gradient">Ambitious by choice.</span>
+  </h2>
+
+  <h3 class="about-greeting">Hello, I'm Akshra.</h3>
+
+  <div class="about-story">
+
+    <p>
+      I'm a technology enthusiast, a continuous learner and an explorer who
+      believes that the possibilities of tomorrow begin with the curiosity
+      we have today.
+    </p>
+
+    <p>
+      I'm fascinated by technology and its potential to transform ideas into
+      meaningful things. I enjoy exploring new concepts, understanding how
+      things work and discovering opportunities beyond what I already know.
+    </p>
+
+    <p>
+      For me, learning isn't just about gaining knowledge. It's about
+      developing the ability to think independently, solve problems,
+      experiment with ideas and eventually create something meaningful of
+      my own.
+    </p>
+
+    <p>
+      I'm ambitious about building my own identity, becoming independent and
+      exploring different fields to discover my full potential. I don't want
+      to limit my curiosity to a single direction. I want to keep learning,
+      innovating and challenging myself to grow.
+    </p>
+
+    <p>
+      I believe success isn't simply about reaching a destination. It's about
+      the person you become, the things you create and the impact you leave
+      along the way.
+    </p>
+
+  </div>
+
+  <div class="about-divider"></div>
+
+  <h3 class="about-defines-title">What defines me</h3>
+
+  <div class="card-grid about-traits">
+
+    <div class="card about-trait">
+      <span class="trait-number">01</span>
+      <h3>Technology Enthusiast</h3>
+      <p>Exploring technology and its endless possibilities.</p>
+    </div>
+
+    <div class="card about-trait">
+      <span class="trait-number">02</span>
+      <h3>Continuous Learner</h3>
+      <p>Turning curiosity into knowledge and capability.</p>
+    </div>
+
+    <div class="card about-trait">
+      <span class="trait-number">03</span>
+      <h3>Explorer</h3>
+      <p>Discovering new fields, ideas and perspectives.</p>
+    </div>
+
+    <div class="card about-trait">
+      <span class="trait-number">04</span>
+      <h3>Ambitious</h3>
+      <p>Building independence and creating my own identity.</p>
+    </div>
+
+  </div>
+
+  <div class="about-philosophy">
+    <span>MY PERSONAL PHILOSOPHY</span>
+    <p>
+      Explore without limits. Learn without stopping. Create with purpose.
     </p>
   </div>
-</section>
 
-<!-- PROJECTS -->
-<section id="projects" class="reveal">
-  <h2 class="section-title">
-    My <span class="gradient">Projects.</span>
-  </h2>
-  <p class="section-subtitle">
-    Things I'm building and exploring.
-  </p>
-
-  <div class="card-grid">
-
-    <div class="card tilt">
-      <span class="card-icon">⌘</span>
-      <h3>01 / Development</h3>
-      <p>Software, programming and experiments.</p>
-    </div>
-
-    <div class="card tilt">
-      <span class="card-icon">🎮</span>
-      <h3>02 / Game Development</h3>
-      <p>Game mechanics, creative worlds and interactive experiences.</p>
-    </div>
-
-    <div class="card tilt">
-      <span class="card-icon">✦</span>
-      <h3>03 / Creative Ideas</h3>
-      <p>New concepts, experiments and future projects.</p>
-    </div>
-
-  </div>
 </section>
 
 <!-- INTERESTS -->
