@@ -294,7 +294,103 @@ section {
   animation: bounce 2s infinite;
 }
 
-/* SECTION TITLES */
+/* ENHANCED HOME PAGE */
+
+.hero-kicker {
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 22px;
+}
+
+.hero-name {
+  color: var(--white);
+  font-size: clamp(22px, 4vw, 32px);
+  margin-top: 18px;
+  animation: fadeUp 1s .3s both;
+}
+
+.hero-description {
+  color: var(--muted);
+  max-width: 650px;
+  margin: 20px auto !important;
+  font-size: 16px !important;
+  line-height: 1.9;
+  animation: fadeUp 1s .4s both;
+}
+
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 12px 0 28px;
+  animation: fadeUp 1s .5s both;
+}
+
+.hero-tags span {
+  padding: 7px 15px;
+  border: 1px solid #62d9ff35;
+  background: #62d9ff0c;
+  color: #c4d8f5;
+  border-radius: 30px;
+  font-size: 12px;
+  letter-spacing: .5px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  animation: fadeUp 1s .6s both;
+}
+
+.hero-actions .button {
+  margin: 0;
+}
+
+.button-outline {
+  display: inline-block;
+  padding: 13px 27px;
+  border-radius: 10px;
+  border: 1px solid #62d9ff65;
+  color: var(--blue);
+  font-weight: bold;
+  transition: .3s;
+}
+
+.button-outline:hover {
+  background: #62d9ff12;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px #62d9ff15;
+}
+
+@media(max-width: 700px) {
+  .hero-description {
+    font-size: 14px !important;
+  }
+
+  .hero-tags {
+    gap: 7px;
+  }
+
+  .hero-tags span {
+    font-size: 11px;
+    padding: 6px 11px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .hero-actions a {
+    text-align: center;
+  }
+}/* SECTION TITLES */
 
 .section-title {
   font-size: 38px;
@@ -725,25 +821,48 @@ footer span {
 <!-- HERO -->
 <section class="hero" id="home">
 
-  <div class="tag">WELCOME TO MY DIGITAL UNIVERSE</div>
+  <div class="tag">
+    CURIOUS MIND · AMBITIOUS VISION
+  </div>
 
   <h1>
-    Hello, I'm<br>
-    <span class="gradient">Akshra.</span>
+    Turning curiosity into<br>
+    <span class="gradient">possibilities.</span>
   </h1>
 
-  <p>
-    I'm interested in
-    <span class="typing" id="typing"></span><br>
-    Exploring technology, building ideas and creating
-    things that make the digital world more interesting.
+  <h2 class="hero-name">
+    Hello, I'm Akshra.
+  </h2>
+
+  <p class="hero-description">
+    A technology enthusiast, continuous learner and explorer.
+    I'm passionate about discovering ideas, exploring possibilities
+    and developing the ability to create something meaningful.
+    <br>
+    Interested in <span class="typing" id="typing"></span>
   </p>
 
-  <a href="#projects" class="button">
-    Explore My World ↗
-  </a>
+  <div class="hero-tags">
+    <span>Technology</span>
+    <span>Learning</span>
+    <span>Exploration</span>
+    <span>Innovation</span>
+  </div>
 
-  <div class="scroll-hint">SCROLL TO EXPLORE ↓</div>
+  <div class="hero-actions">
+    <a href="#projects" class="button">
+      Explore My Projects ↗
+    </a>
+
+    <a href="#about" class="button-outline">
+      Get to Know Me →
+    </a>
+  </div>
+
+  <div class="scroll-hint">
+    SCROLL TO EXPLORE ↓
+  </div>
+
 </section>
 
 <!-- ABOUT -->
@@ -990,10 +1109,10 @@ sections.forEach(section => activeObserver.observe(section));
 /* TYPING EFFECT */
 const words = [
   "Technology.",
-  "Programming.",
-  "Creativity.",
   "Innovation.",
-  "Game Development."
+  "Programming.",
+  "Creative Ideas.",
+  "New Possibilities."
 ];
 
 const typing = document.getElementById("typing");
